@@ -119,7 +119,7 @@ That is, once all the documents have been encoded (i.e., converted into represen
 At search time, each document vector is sequentially compared to the query vector.
 In other words, the library just performs brute force dot products of each query vector against all document vectors.
 
-The above indexing command takes around 30 minutes to run on a modern laptop, with most of the time occupied by performing neural inference using the CPU. We also provide a bunch of [prebuilt indexes](prebuilt-indexes.md) including the BGE-base index for the MS MARCO dataset, so that you don't have to go through the indexing process for these standard large datasets. You can also try to reproduce many other experiments via the [two click commands](../readme.md#reproducibility) page.
+The above indexing command takes around 30 minutes to run on a modern laptop, with most of the time occupied by performing neural inference using the CPU. We also provide a bunch of [prebuilt indexes](prebuilt-indexes.md) including the BGE-base index for the MS MARCO dataset, so that you don't have to go through the indexing process for these standard large datasets.
 Adjust the `batch` parameter above accordingly for your hardware; 32 is the default, but reduce the value if you find that the encoding is taking too long.
 
 ## Retrieval
@@ -303,7 +303,7 @@ PLAIN-3074 Q0 MED-2587 10 1.010811 Faiss
 </details>
 <br/>
 
-And that's it!
+And that's it! If you are interested, the README.md page of this project has linked the [two click commands](../README.md#reproducibility) page for you to reproduce many standard experiments on different dataset.
 
 The next lesson will provide [a deeper dive into dense and sparse representations](conceptual-framework2.md).
 Before you move on, however, add an entry in the "Reproduction Log" at the bottom of this page, following the same format: use `yyyy-mm-dd`, make sure you're using a commit id that's on the main trunk of Pyserini, and use its 7-hexadecimal prefix for the link anchor text.
